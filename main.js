@@ -231,5 +231,23 @@ footerNavItems.forEach((item,i)=>{
 item.addEventListener("click", ()=>{
     footerNavitem[i].classList.toggle("footerList_open")
 
+
 })
 })
+
+
+function myFunction(x) {
+   
+    if (x.matches) { // If media query matches
+        let parentList=document.querySelector(".additional_info")
+        let cart = document.querySelector(".userCart")
+        let acount = document.querySelector(".account_wishlist")
+        parentList.insertBefore(cart, acount)
+    }
+  }
+  
+  let x = window.matchMedia("(max-width: 884px)")
+  myFunction(x) 
+
+
+

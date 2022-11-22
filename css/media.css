@@ -75,6 +75,7 @@
     .social_networks h2{
         background-position-y:8px;
         margin: unset;
+        margin-bottom: 15px;
     }
 
     .social_networks >*{
@@ -101,10 +102,12 @@
     .user_nav{
         justify-content: flex-end;
     }
-    .header_contacts, .account_wishlist{
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        justify-content: baseline;
+
+    .header_contacts{
+        display: none;
+    }
+    .additional_info{
+        justify-content: space-between;
     }
     .search_bar{
         margin: 0;
@@ -161,16 +164,15 @@
         .footer_navigation .footer_lists{
             display: none;
         }
-        .footerList_open{
+        .footer_navigation  .footerList_open{
             display: block;
         }
         .footer_navigation h5{
             font-size: 16px;
         }
         .footer_edition p {
-            align-self: flex-end;
             font-size: 11px;
-            margin-top: 15px;
+
         }
         .navItem_container {
             text-align: left
@@ -185,6 +187,13 @@
         .footer_navigation > *{
             width: 100%;
         }
+        @media only screen and (max-width: 516px){
+
+            .account_wishlist li:not(:last-child){
+ 
+             display: none;
+            }
+         }
 
         
     }
@@ -220,6 +229,10 @@
     flex-direction: column-reverse;
 }
 
+.footer_edition p {
+    align-self: flex-end;
+    margin-top: 15px;
+}
 
 
 
@@ -229,6 +242,8 @@
         .game-lists .slider-item{
             width: 100%;
         }
+
+       
 
         @media only screen and (max-width: 404px){
 
@@ -242,9 +257,7 @@
                     .header_contacts{
             display: none;
         }
-        .additional_info {
-            justify-content: flex-end
-    }
+
 
     @media only screen and (max-width:378px){
         .blog_articles {
