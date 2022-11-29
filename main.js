@@ -230,8 +230,6 @@ let footerNavitem=document.querySelectorAll(".footer_lists")
 footerNavItems.forEach((item,i)=>{
 item.addEventListener("click", ()=>{
     footerNavitem[i].classList.toggle("footerList_open")
-
-
 })
 })
 
@@ -244,9 +242,19 @@ function myFunction(x) {
         let acount = document.querySelector(".account_wishlist")
         parentList.insertBefore(cart, acount)
     }
+    if(y.matches){
+
+        footerNavItems.forEach((item)=>{
+       
+                item.classList.add("menu_items")
+       
+            })
+
+    }
   }
   
-  let x = window.matchMedia("(max-width: 884px)")
+  let x = window.matchMedia("(max-width: 884px)") 
+  let y= window.matchMedia("(max-width:593px)")
   myFunction(x) 
 
 
